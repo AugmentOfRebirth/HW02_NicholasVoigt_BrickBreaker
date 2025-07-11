@@ -16,8 +16,7 @@ public class TitleScreenGameManager : MonoBehaviour
     }
     public void startGame()
     {
-        //may need to randomize the level or something :)
-        //SceneManager.LoadScene("Level01");
+        SceneManager.LoadScene("Level01");
     }
     public void exitGame()
     {
