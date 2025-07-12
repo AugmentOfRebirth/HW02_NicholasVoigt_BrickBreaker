@@ -555,8 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc98e1c423e92a48bc5331b994c3aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedHorizontal: 0.16
-  speedVertical: 0.09
+  speedHorizontal: 0.03
+  speedVertical: 0.01
   bgRenderer: {fileID: 717129019}
 --- !u!23 &717129019
 MeshRenderer:
@@ -581,7 +581,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ba9f348c1a334b41809149480937687, type: 2}
+  - {fileID: 2100000, guid: 215e9aff82a11b4488e6fe4073138edf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -621,7 +621,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 32, y: 18, z: 1}
+  m_LocalScale: {x: 128, y: 72, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
