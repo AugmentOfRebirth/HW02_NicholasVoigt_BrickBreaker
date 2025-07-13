@@ -1,13 +1,21 @@
+using TMPro;
 using UnityEngine;
 
 public class BallOfBounce : MonoBehaviour
 {
     Rigidbody2D rb;
-    public float maxSpeed = 10f;
+    public float speed = 10f;
+    int score = 0;
+    int lives = 5;
+    public TextMeshProUGUI scoretxt;
+    public GameObject[] livesImage;
+    public GameObject gameoverPanel;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.linearVelocity = Vector2.down * speed;
     }
 
     // Update is called once per frame
@@ -20,19 +28,34 @@ public class BallOfBounce : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("OB"))
         {
-            transform.position = Vector3.zero;
-            rb.linearVelocity = Vector3.zero;
+            if(lives <= 0)
+            {
+                gameOver();
+            }
+            else
+            {
+                transform.position = Vector3.zero;
+                rb.linearVelocity = Vector2.down * speed;
+                lives--;
+                livesImage[lives].gameObject.SetActive(false);
+            }
         }
         else if (collision.gameObject.CompareTag("Brick"))
         {
             Destroy(collision.gameObject);
+            score += 30;
+            scoretxt.text = score.ToString("000000");
         }
     }
     void FixedUpdate()
     {
-        if (rb.linearVelocity.magnitude > maxSpeed)
-        {
-            rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
-        }
+        rb.linearVelocity = rb.linearVelocity.normalized * speed;
+    }
+
+    public void gameOver()
+    {      
+        gameoverPanel.SetActive(true);
+        Time.timeScale = 0;
+        Destroy(gameObject);
     }
 }
