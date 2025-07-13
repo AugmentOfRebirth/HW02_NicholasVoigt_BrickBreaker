@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bbc29965d6260a4fa236de8d807388b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  brickOriginal: {fileID: 7418510375468418464}
+  type: 0
+  brickOriginal: {fileID: 0}
   powerup1: {fileID: 681020096194149561, guid: 6420b520daaa4644eb9f224733647325, type: 3}
   powerup2: {fileID: 5866268512284659328, guid: 706378f1391be3f46af4c6ef4045190c, type: 3}
   powerup3: {fileID: 6859342232320757939, guid: 02243680d4868e343b28ecf2ba735122, type: 3}

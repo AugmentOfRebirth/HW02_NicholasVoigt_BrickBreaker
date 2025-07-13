@@ -5,6 +5,7 @@ public class BrickBehavior : MonoBehaviour
 {
     public enum brickType
     {
+        NormalBrick,
         TougherBrick,
         PowerupBrick
     }
@@ -18,6 +19,11 @@ public class BrickBehavior : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ball") && type == brickType.TougherBrick)
+        {
+            Destroy(gameObject);
+            Instantiate(brickOriginal, transform.position, Quaternion.identity);
+        }
+        else if (collision.gameObject.CompareTag("Ball") && type == brickType.NormalBrick)
         {
             Destroy(gameObject);
             Instantiate(brickOriginal, transform.position, Quaternion.identity);
