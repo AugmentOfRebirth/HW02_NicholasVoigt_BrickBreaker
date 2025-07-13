@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3447897941698280702}
   - component: {fileID: 7290104762168019838}
   - component: {fileID: 8138667767242360794}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: brick2
-  m_TagString: Untagged
+  m_TagString: Brick2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1943884185
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 5352722585669383705, guid: 4879aba5cabb29e47a0930463121ed8f, type: 3}
   m_Color: {r: 0.85660374, g: 0.17839769, b: 0.037173275, a: 1}
@@ -101,7 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bbc29965d6260a4fa236de8d807388b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   brickOriginal: {fileID: 7418510375468418464, guid: 9c29263a4e074484b9bb1e97c7f68222, type: 3}
+  powerup1: {fileID: 681020096194149561, guid: 6420b520daaa4644eb9f224733647325, type: 3}
+  powerup2: {fileID: 5866268512284659328, guid: 706378f1391be3f46af4c6ef4045190c, type: 3}
+  powerup3: {fileID: 6859342232320757939, guid: 02243680d4868e343b28ecf2ba735122, type: 3}
 --- !u!61 &8138667767242360794
 BoxCollider2D:
   m_ObjectHideFlags: 0

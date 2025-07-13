@@ -8,6 +8,10 @@ TagManager:
   - Ball
   - Brick
   - Wall
+  - Brick2
+  - P_Score
+  - P_Speed
+  - P_Life
   layers:
   - Default
   - TransparentFX
@@ -15,9 +19,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Powerup
+  - Brick
+  - Ball
   - 
   - 
   - 
@@ -44,6 +48,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Brick
+    uniqueID: 2351083111
+    locked: 0
+  - name: Powerup
+    uniqueID: 1021797183
+    locked: 0
+  - name: Ball
+    uniqueID: 916869383
     locked: 0
   m_RenderingLayers:
   - Default

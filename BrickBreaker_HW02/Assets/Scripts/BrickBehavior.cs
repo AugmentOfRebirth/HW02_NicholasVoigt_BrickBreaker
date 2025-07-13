@@ -11,6 +11,10 @@ public class BrickBehavior : MonoBehaviour
     public brickType type;
     public GameObject brickOriginal;
 
+    public GameObject powerup1;
+    public GameObject powerup2;
+    public GameObject powerup3;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ball") && type == brickType.TougherBrick)
@@ -22,6 +26,26 @@ public class BrickBehavior : MonoBehaviour
         {
             Destroy(gameObject);
             //spawn powerup
+
+            GameObject powerupToSpawn;
+            int spawnNum = Random.Range(0, 3);
+            if (spawnNum == 0)
+            {
+                powerupToSpawn = powerup1;
+            }
+            else if (spawnNum == 1)
+            {
+                powerupToSpawn = powerup2;
+            }
+            else
+            {
+                powerupToSpawn = powerup3;
+            }
+            Instantiate(powerupToSpawn, transform.position, Quaternion.identity);
+        }
+        else if (collision.gameObject.CompareTag("OB"))
+        {
+            Destroy(gameObject);
         }
         
     }
